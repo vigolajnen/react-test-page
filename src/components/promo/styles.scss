@@ -1,0 +1,329 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.promo {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  color: $white-color;
+  overflow: hidden;
+  background-color: $dark-color;
+
+  transform-style: inherit;
+
+  @media (min-width: $sm) {
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -50%;
+      left: 20%;
+      width: 494px;
+      height: 494px;
+
+      background-image: radial-gradient(
+        50% 50% at 50% 50%,
+        #1a61cb 76.56%,
+        rgba(9, 39, 98, 0) 100%
+      );
+      filter: blur(162px);
+    }
+  }
+
+  @media (min-width: $xl) {
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 10%;
+      left: 0;
+      width: 300px;
+      height: 373px;
+
+      background-image: url('../../images/promo/p04.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @supports (background-image: -webkit-image-set(url('../../images/promo/p04.webp') 1x)) {
+        background-image: url('../../images/promo/p04.webp');
+      }
+
+      animation: showElementPic3 1s forwards;
+    }
+  }
+
+  & .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0;
+    padding: 0 15px;
+    padding-top: 24px;
+
+    @media (min-width: $xs) {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+    @media (min-width: $sm) {
+      flex-direction: row;
+      padding-top: 62px;
+    }
+    @media (min-width: $md) {
+      padding-top: 75px;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    z-index: 4;
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (min-width: $xs) {
+      text-align: left;
+    }
+
+    @media (min-width: $xl) {
+      padding-left: 230px;
+
+    }
+  }
+
+  &__title {
+    max-width: 100%;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: $primary-color;
+
+    @media (min-width: $sm) {
+      line-height: 140%;
+      font-size: 36px;
+    }
+    @media (min-width: $xl) {
+      line-height: 110%;
+    }
+    @media (min-width: $xxl) {
+      font-size: 43px;
+    }
+  }
+
+  &__price {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 38px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+
+    @media (min-width: $sm) {
+      font-size: 36px;
+    }
+    @media (min-width: $xl) {
+      font-size: 52px;
+    }
+
+    & span {
+      font-size: 16px;
+      @media (min-width: $sm) {
+        font-size: 26px;
+      }
+      @media (min-width: $xl) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 100%;
+    margin-bottom: 34px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    @media (min-width: $sm) {
+      font-size: 25px;
+      line-height: 120%;
+    }
+    @media (min-width: $xl) {
+      font-size: 67px;
+    }
+    @media (min-width: $xxl) {
+      font-size: 70px;
+    }
+  }
+
+  &__pic {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    min-height: 348px;
+    margin-left: auto;
+    transition: 0.3s;
+
+    @media (min-width: $md) {
+      width: 400px;
+      min-height: 650px;
+    }
+    &--pic-w {
+      position: absolute;
+      bottom: -30px;
+      right: -15%;
+      width: 316.54px;
+      height: 430px;
+
+      @media (min-width: $xs) {
+        width: 526px;
+        height: 620px;
+        top: 0;
+        bottom: -30px;
+        right: -48%;
+      }
+
+      @media (min-width: $md) {
+        width: 505px;
+        height: 761px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        right: 10%;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../images/promo/woman.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @supports (background-image: -webkit-image-set(url('../../images/promo/woman.webp') 1x)) {
+          background-image: url('../../images/promo/woman.webp');
+        }
+
+
+      }
+    }
+    &--pic-2 {
+      position: absolute;
+      bottom: 5%;
+      left: 10%;
+      width: 265.77px;
+      height: 265.77px;
+
+      @media (min-width: $xs) {
+        width: 409px;
+        height: 409px;
+        left: -23%;
+      }
+      @media (min-width: $md) {
+        width: 424px;
+        height: 424px;
+        left: -68%;
+        bottom: 6%;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../images/promo/ellipse2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @supports (background-image: -webkit-image-set(url('../../images/promo/ellipse2.webp') 1x)) {
+          background-image: url('../../images/promo/ellipse2.webp');
+        }
+      }
+    }
+
+    &--pic-1 {
+      position: absolute;
+      top: -10%;
+      right: -30%;
+
+      width: 284.57px;
+      height: 284.57px;
+
+      @media (min-width: $xs) {
+        width: 406px;
+        height: 407px;
+        top: -60%;
+      }
+      @media (min-width: $md) {
+        width: 454px;
+        height: 454px;
+        right: -32px;
+        top: -5%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        right: -10px;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../images/promo/ellipse.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @supports (background-image: -webkit-image-set(url('../../images/promo/ellipse.webp') 1x)) {
+          background-image: url('../../images/promo/ellipse.webp');
+        }
+      }
+    }
+  }
+}
+
+@keyframes showElementPic1 {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes showElementPic2 {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes showElementPic3 {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

@@ -1,0 +1,123 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.profit {
+  position: relative;
+  background-color: $bg-block-gr;
+  overflow: hidden;
+  background-image: $bg-image-gradient;
+
+  @media (min-width: $xl) {
+    padding-top: 100px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+
+    width: 494px;
+    height: 494px;
+    background-image: $bg-gradient-radial;
+    filter: blur(162px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 706px;
+    height: 706px;
+
+    @media (min-width: $sm) {
+      bottom: -10%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 45%;
+      left: 10%;
+      width: 494px;
+      height: 494px;
+      background-image: $bg-gradient-radial;
+      filter: blur(162px);
+    }
+  }
+
+  & .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1440px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $md) {
+      gap: 60px;
+      padding-top: 0;
+      padding-bottom: 54px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 494px;
+      height: 494px;
+      background-image: $bg-gradient-radial;
+      filter: blur(162px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media (min-width: $sm) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title-pic {
+    width: 300px;
+    height: 250px;
+
+    @media (min-width: $md) {
+      width: 430px;
+      height: 200px;
+      max-width: 30%;
+    }
+  }
+
+  & .list-profit {
+    gap: 20px;
+    width: 100%;
+
+    @media (min-width: $md) {
+      gap: 40px;
+      width: calc(100% - 430px);
+    }
+  }
+}

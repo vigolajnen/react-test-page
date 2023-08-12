@@ -1,0 +1,113 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.advantages {
+  position: relative;
+  padding-top: 30px;
+
+  color: $white-color;
+  overflow: hidden;
+
+  background-image: $bg-image-gradient;
+
+  @media (min-width: $sm) {
+    padding-top: 0;
+    padding-bottom: 54px;
+  }
+  @media (min-width: $md) {
+    background-color: transparent;
+    padding-top: 50px;
+  }
+
+  & .element-animation.element-show {
+    transition-duration: 0.5s;
+  }
+
+  & .container {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+
+    @media (min-width: $md) {
+      flex-direction: row;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      width: 494px;
+      height: 494px;
+
+      background-image: $bg-gradient-radial;
+
+      filter: blur(162px);
+    }
+  }
+
+  & .title {
+    position: relative;
+    text-align: left;
+
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 110%;
+    /* or 77px */
+
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      z-index: 2;
+      content: '';
+      top: -60%;
+      left: 10%;
+      width: 350px;
+      height: 298px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../../images/title/hearth.png');
+    }
+  }
+
+  &__info {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-left: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+
+    @media (min-width: $sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__blockquote {
+    display: inline-flex;
+    position: relative;
+    font-weight: 700;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -22px;
+      width: 4px;
+      height: 100%;
+      background-color: $dark-color;
+    }
+  }
+
+  &__button-pay {
+    display: block;
+    margin: 0 auto;
+  }
+}

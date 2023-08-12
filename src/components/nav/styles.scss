@@ -1,0 +1,33 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.navigation {
+  padding-top: 2rem;
+
+  & small {
+    text-align: left;
+    display: inherit;
+  }
+
+  &__list {
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $white-color;
+  }
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    @include linkReset();
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    display: block;
+    text-transform: uppercase;
+    color: $white-color;
+    text-align: left;
+  }
+}

@@ -1,0 +1,284 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.faq {
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  padding-top: 50px;
+
+  color: $white-color;
+  background-color: $bg-block-gr;
+  background-image: linear-gradient(0deg, #010310 0%, #000000 100%);
+
+  transform: translateY(0%);
+
+  @media (min-width: $sm) {
+    padding-top: 100px;
+    // padding-bottom: 100px;
+  }
+  @media (min-width: $md) {
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(
+      179.97deg,
+      rgba(5, 10, 52, 0) 11.31%,
+      #030619 33.51%,
+      #020202 99.98%
+    );
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  & .container {
+    // z-index: 5;
+    position: relative;
+    max-width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;
+    // margin-bottom: 50px;
+    justify-content: flex-start;
+
+    // @media (min-width: $sm) {
+    //   margin-bottom: 50px;
+    // }
+
+    @media (min-width: $md) {
+      padding-left: 100px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  }
+
+  & .title {
+    position: relative;
+    margin-bottom: 10px;
+    // z-index: 1;
+    text-align: center;
+    @media (min-width: $md) {
+      text-align: left;
+    }
+  }
+
+  &__bg {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    max-width: 100%;
+    @media (min-width: $xs) {
+      height: 400px;
+    }
+    @media (min-width: $md) {
+      position: absolute;
+      top: -10%;
+      right: 0;
+      width: 50%;
+      height: 800px;
+    }
+
+    &--1 {
+      z-index: 0;
+      position: absolute;
+      // top: -5%;
+      bottom: 0;
+      right: -10%;
+      width: 764px;
+      height: 300px;
+      max-width: 100%;
+      background-image: url('../../images/faq/men.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @supports (
+        background-image: -webkit-image-set(url('../../images/faq/men.webp') 1x)
+      ) {
+        background-image: url('../../images/faq/men.webp');
+      }
+
+      @media (min-width: $xs) {
+        height: 400px;
+        top: 10%;
+        right: -30%;
+      }
+
+      @media (min-width: $md) {
+        position: fixed;
+        height: 640px;
+        top: auto;
+        bottom: -50px;
+        right: -5%;
+      }
+
+      @media (min-width: 2000px) {
+        bottom: 0;
+        right: 6%;
+      }
+    }
+    &--2 {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 938px;
+      height: 636px;
+      max-width: 100%;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #071053 40.76%,
+        #020c56 76.56%,
+        #000000 98.44%
+      );
+      filter: blur(162px);
+    }
+  }
+
+  &__list {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    margin: 27px 0 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 624px;
+    border-top: 1px solid $white-color;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: $white-color;
+
+    @media (min-width: $sm) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $md) {
+      margin-right: auto;
+      margin-left: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.accordion {
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  padding: 15px 10px;
+  padding-right: 50px;
+  padding-left: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: $mainFont;
+  font-size: 16px;
+  transition: 0.4s;
+  border-bottom: 1px solid $white-color;
+  background-color: transparent;
+  color: inherit;
+  font-weight: 400;
+  line-height: 130%;
+  transition: 0.3s;
+
+  @media (min-width: $sm) {
+    padding: 22px;
+    padding-right: 100px;
+    padding-left: 30px;
+    font-size: 20px;
+  }
+
+  @media (min-width: $xl) {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-image: url('../../images/icons/plus.svg');
+
+    @media (min-width: $sm) {
+      right: 30px;
+    }
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+    background-color: transparent;
+
+    &::before {
+      transition: 0.4s;
+      transform: translateY(-50%) rotate(0);
+    }
+  }
+
+  &.active {
+    &::before {
+      transition: 0.3s;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}
+
+.active,
+.accordion:hover {
+  outline: none;
+  background-color: transparent;
+}
+
+.panel {
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+
+  display: none;
+  overflow: hidden;
+  animation: 0.5s acctext reverse;
+  transition: 0.3s;
+
+  & > * {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  &.active {
+    display: flex;
+    animation: 0.5s acctext forwards;
+  }
+}
+
+@keyframes acctext {
+  from {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(5%);
+  }
+}

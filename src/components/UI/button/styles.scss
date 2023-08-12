@@ -1,0 +1,68 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.button {
+  @include buttonReset();
+  z-index: 0;
+  position: relative;
+  // padding: 2px;
+  padding: 15px 76px;
+  margin: 2%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 50px;
+  background: $bg-gradient;
+  color: $white-color;
+  transition: $transition-base;
+  border-radius: $borderRadius;
+  cursor: pointer;
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: $borderRadius;
+    background: $bg-product;
+    background: transparent;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    transition: $transition-base;
+    text-decoration: none;
+
+    &::before {
+      background: $bg-product;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &--outline {
+    & span {
+      display: flex;
+      padding: 15px 76px;
+      border-radius: $borderRadius;
+      background: $bg-product;
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+      transition: $transition-base;
+
+      & span {
+        background: $bg-gradient;
+      }
+    }
+  }
+}

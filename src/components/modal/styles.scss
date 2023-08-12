@@ -1,0 +1,82 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.modal.show {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: showElement 0.2s forwards;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+  // padding-right: 0px;
+}
+
+.modal-dialog {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: showElementY 0.2s forwards;
+  }
+}
+
+.modal-content {
+  position: relative;
+  @media (min-width: $sm) {
+    padding: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.modal-header {
+  padding: 2rem 1rem 1rem;
+  border: none;
+
+  @media (min-width: $sm) {
+   padding-top: 0;
+  }
+}
+
+.modal .title {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: $sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.modal .close {
+  position: absolute;
+  top: 1rem;
+  right: 10px;
+  font-size: 35px;
+  line-height: 50%;
+
+  & span {
+    display: block;
+    padding: 0.5rem;
+  }
+}
+
+@keyframes showElement {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showElementY {
+  from {
+    transform: translateY(-10%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

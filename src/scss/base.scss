@@ -1,0 +1,138 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body,
+.page {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: $mediumFontWeight;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  background-color: $bg-color;
+  color: $white-color;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+svg {
+  fill: currentColor;
+}
+
+button[type='submit'] {
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 54px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 110%;
+  text-align: center;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  color: inherit;
+
+  @media (min-width: $sm) {
+    font-size: 57px;
+  }
+
+  @media (min-width: $md) {
+    font-size: 60px;
+  }
+
+  &--white {
+    color: $white-color;
+  }
+}
+
+.link-btn {
+  @include linkReset();
+  z-index: 0;
+  position: relative;
+  padding: 15px 76px;
+  margin: 2%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 50px;
+  background: $bg-gradient;
+  color: $white-color;
+  transition: $transition-base;
+  border-radius: $borderRadius;
+
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: $borderRadius;
+    background: $bg-product;
+    background: transparent;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    transition: $transition-base;
+
+    &::before {
+      background: $bg-product;
+    }
+  }
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-position: 99% 2px;
+}
