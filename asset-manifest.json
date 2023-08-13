@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "http://vigolajnen.github.io/react-test-page/static/css/main.1bf4541d.css",
-    "main.js": "http://vigolajnen.github.io/react-test-page/static/js/main.6c2bdd03.js",
+    "main.js": "http://vigolajnen.github.io/react-test-page/static/js/main.a4d4c387.js",
     "static/js/787.d7279a9c.chunk.js": "http://vigolajnen.github.io/react-test-page/static/js/787.d7279a9c.chunk.js",
     "static/media/men.png": "http://vigolajnen.github.io/react-test-page/static/media/men.4ed3b3c77fdb4a55d776.png",
     "static/media/woman.png": "http://vigolajnen.github.io/react-test-page/static/media/woman.8978c09cec2de851691e.png",
@@ -26,11 +26,11 @@
     "index.html": "http://vigolajnen.github.io/react-test-page/index.html",
     "static/media/plus.svg": "http://vigolajnen.github.io/react-test-page/static/media/plus.29c1722b2d248f7deebe.svg",
     "main.1bf4541d.css.map": "http://vigolajnen.github.io/react-test-page/static/css/main.1bf4541d.css.map",
-    "main.6c2bdd03.js.map": "http://vigolajnen.github.io/react-test-page/static/js/main.6c2bdd03.js.map",
+    "main.a4d4c387.js.map": "http://vigolajnen.github.io/react-test-page/static/js/main.a4d4c387.js.map",
     "787.d7279a9c.chunk.js.map": "http://vigolajnen.github.io/react-test-page/static/js/787.d7279a9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1bf4541d.css",
-    "static/js/main.6c2bdd03.js"
+    "static/js/main.a4d4c387.js"
   ]
 }
