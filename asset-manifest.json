@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "http://vigolajnen.github.io/react-test-page/static/css/main.1bf4541d.css",
-    "main.js": "http://vigolajnen.github.io/react-test-page/static/js/main.a4d4c387.js",
+    "main.css": "http://vigolajnen.github.io/react-test-page/static/css/main.b62c5c9f.css",
+    "main.js": "http://vigolajnen.github.io/react-test-page/static/js/main.17f0cba3.js",
     "static/js/787.d7279a9c.chunk.js": "http://vigolajnen.github.io/react-test-page/static/js/787.d7279a9c.chunk.js",
     "static/media/men.png": "http://vigolajnen.github.io/react-test-page/static/media/men.4ed3b3c77fdb4a55d776.png",
     "static/media/woman.png": "http://vigolajnen.github.io/react-test-page/static/media/woman.8978c09cec2de851691e.png",
     "static/media/ellipse.png": "http://vigolajnen.github.io/react-test-page/static/media/ellipse.2c5316c4a9a2903f7984.png",
     "static/media/p04.png": "http://vigolajnen.github.io/react-test-page/static/media/p04.e2f546947927db76e049.png",
     "static/media/ellipse2.png": "http://vigolajnen.github.io/react-test-page/static/media/ellipse2.06afcda16f1d507e7aca.png",
+    "static/media/title3.png": "http://vigolajnen.github.io/react-test-page/static/media/title3.b87583b68e053b899182.png",
     "static/media/hearth.png": "http://vigolajnen.github.io/react-test-page/static/media/hearth.2234b19e149748b2667a.png",
     "static/media/men.webp": "http://vigolajnen.github.io/react-test-page/static/media/men.2c7c7d8daa185296b453.webp",
     "static/media/ellipse.webp": "http://vigolajnen.github.io/react-test-page/static/media/ellipse.c2a0804c03ebc9fb2b40.webp",
-    "static/media/title3.png": "http://vigolajnen.github.io/react-test-page/static/media/title3.b87583b68e053b899182.png",
     "static/media/woman.webp": "http://vigolajnen.github.io/react-test-page/static/media/woman.0835a1a66346c5796cae.webp",
     "static/media/GothaProBol.woff": "http://vigolajnen.github.io/react-test-page/static/media/GothaProBol.1d57c1a06613cee3fb37.woff",
     "static/media/GothaProReg.woff": "http://vigolajnen.github.io/react-test-page/static/media/GothaProReg.ef3ca075ec32ebc311aa.woff",
@@ -22,15 +22,15 @@
     "static/media/GothaProReg_1.woff2": "http://vigolajnen.github.io/react-test-page/static/media/GothaProReg_1.65f17a91ff3685545b3a.woff2",
     "static/media/GothaProBol.woff2": "http://vigolajnen.github.io/react-test-page/static/media/GothaProBol.d57aed1aa7343d162fe5.woff2",
     "static/media/title.webp": "http://vigolajnen.github.io/react-test-page/static/media/title.ac97424e989da52e86fa.webp",
-    "static/media/title2.webp": "http://vigolajnen.github.io/react-test-page/static/media/title2.1fa92fe1d261a738c361.webp",
+    "static/media/title2.webp": "http://vigolajnen.github.io/react-test-page/static/media/title2.97837e171506e3da80de.webp",
     "index.html": "http://vigolajnen.github.io/react-test-page/index.html",
     "static/media/plus.svg": "http://vigolajnen.github.io/react-test-page/static/media/plus.29c1722b2d248f7deebe.svg",
-    "main.1bf4541d.css.map": "http://vigolajnen.github.io/react-test-page/static/css/main.1bf4541d.css.map",
-    "main.a4d4c387.js.map": "http://vigolajnen.github.io/react-test-page/static/js/main.a4d4c387.js.map",
+    "main.b62c5c9f.css.map": "http://vigolajnen.github.io/react-test-page/static/css/main.b62c5c9f.css.map",
+    "main.17f0cba3.js.map": "http://vigolajnen.github.io/react-test-page/static/js/main.17f0cba3.js.map",
     "787.d7279a9c.chunk.js.map": "http://vigolajnen.github.io/react-test-page/static/js/787.d7279a9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bf4541d.css",
-    "static/js/main.a4d4c387.js"
+    "static/css/main.b62c5c9f.css",
+    "static/js/main.17f0cba3.js"
   ]
 }
